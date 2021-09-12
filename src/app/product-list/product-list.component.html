@@ -3,9 +3,14 @@
 <div *ngFor="let product of products">
   <h3>
     <a [title]="product.name + ' details'">
+      <!-- Data bind char [] -->
       {{ product.name }}
     </a>
   </h3>
+  <p *ngIf="product.description">
+    <!-- Check if there is desc or not -->
+    Description: {{ product.description }}
+  </p>
   <p>
     RM {{ product.price }}
   </p>
